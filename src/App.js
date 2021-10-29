@@ -1,7 +1,14 @@
 import LandingPage from "./LandingPage/LandingPage";
+import { Route, Switch } from "react-router-dom";
+import Search from "./Search/Search";
 
 function App() {
-  return <LandingPage />;
+  return (
+    <Switch>
+      <Route path="/search" component={Search} />
+      <Route path="/" component={LandingPage} />
+    </Switch>
+  );
 }
 
 export default App;
