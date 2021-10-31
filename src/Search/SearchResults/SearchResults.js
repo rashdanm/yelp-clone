@@ -7,7 +7,7 @@ function SearchResults(props) {
   }
 
   const searchResults = props.businesses.map((b) => (
-    <SearchResult key={b.id} businesses={b} />
+    <SearchResult key={b.id} business={b} />
   ));
   return <div className={styles["search-results"]}>{searchResults}</div>;
 }

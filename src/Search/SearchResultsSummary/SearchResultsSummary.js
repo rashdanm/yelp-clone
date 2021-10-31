@@ -1,13 +1,24 @@
 import styles from "./SearchResultsSummary.module.css";
 
 function SearchResultsSummary(props) {
+  let resultStats = null;
+
+  if (props.amountResults && props.showResults) {
+    resultStats = (
+      <p>
+        Showing 1-{props.showResults} results out of {props.amountResults}{" "}
+        results
+      </p>
+    );
+  }
+
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles["search-summary"]}`}>
         <h1 className="subtitle">
           <strong>{props.term}</strong> {props.location}
         </h1>
-        <p>Showing 1-20 results out of 543 results</p>
+        {resultStats}
       </div>
       <div className={styles.filters}>
         <button className="button">
