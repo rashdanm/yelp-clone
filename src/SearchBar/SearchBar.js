@@ -25,6 +25,7 @@ function SearchBar(props) {
             className={`input ${sizeClass} ${styles["input-control"]}`}
             onChange={(e) => setTerm(e.target.value)}
             type="text"
+            value={term}
             placeholder="burgers, barbers. spas, handymen"
           />
         </p>
@@ -36,6 +37,7 @@ function SearchBar(props) {
             className={`input ${sizeClass} ${styles["input-control"]}`}
             onChange={(e) => setLocation(e.target.value)}
             type="text"
+            value={location}
             placeholder="Where"
           />
         </p>

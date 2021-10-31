@@ -1,11 +1,11 @@
 import styles from "./SearchResultsSummary.module.css";
 
-function SearchResultsSummary() {
+function SearchResultsSummary(props) {
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles["search-summary"]}`}>
         <h1 className="subtitle">
-          <strong>burgers</strong> London
+          <strong>{props.term}</strong> {props.location}
         </h1>
         <p>Showing 1-20 results out of 543 results</p>
       </div>
